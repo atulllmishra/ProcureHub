@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
+import { createBrowserRouter, RouterProvider, useNavigate } from "react-router-dom";
+import SignUpPage from "./SignUpPage";
+ const router = createBrowserRouter([
+   {
+     path: "/signup",
+     element: <SignUpPage />,
+   },
+ ]);
 
 function App() {
   const [page, setPage] = useState("home");
-
+  // Removed unused isLoggedIn state
+  const navigate = useNavigate();
   // Navbar links
   const navLinks = [
     { id: "home", label: "Home" },
@@ -15,6 +24,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
+      <RouterProvider router={router} />
       {/* Navbar */}
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -38,11 +48,12 @@ function App() {
             ))}
           </div>
           <motion.button
+            onClick={() => navigate("/signup")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="bg-blue-600 text-white px-4 py-2 rounded-md transition-all duration-300 hover:bg-blue-700"
           >
-            Get Started
+            Get Started 
           </motion.button>
         </div>
       </nav>
@@ -77,7 +88,7 @@ function HomePage({ setPage }) {
             Welcome to ProcureHub
           </motion.h2>
           <p className="text-lg text-gray-200 mb-4">
-            A transparent and fair platform for IT maintenance contracting.
+            A transparent and fair Bid Management Company for IT maintenances.
           </p>
           <motion.button
             onClick={() => setPage("opportunities")}
@@ -184,6 +195,7 @@ function HomePage({ setPage }) {
           Sign up today and be part of the future of fair procurement.
         </p>
         <motion.button
+          id="get-started-btn "
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-gray-100"
@@ -394,6 +406,7 @@ function ContactPage() {
       </div>
     </section>
   );
+      // Removed unreachable code
 }
 
 export default App;
