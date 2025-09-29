@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 // Placeholder for SignUpPage as it was imported but not defined
-function PlaceholderSignUpPage() {
-  return (
-    <section className="min-h-screen py-16 bg-gray-100 flex items-center justify-center">
-      <div className="max-w-md mx-auto p-8 bg-white rounded-xl shadow-md space-y-6 text-center">
-        <h3 className="text-3xl font-bold text-blue-600 mb-4">Sign Up</h3>
-        <p className="text-gray-700">This is the placeholder sign-up page. The functionality will be added here later.</p>
-        <button
-          onClick={() => window.location.reload()}
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-blue-700"
-        >
-          Go Back
-        </button>
-      </div>
-    </section>
-  );
-}
+// function PlaceholderSignUpPage() {
+//   return (
+//     <section className="min-h-screen py-16 bg-gray-100 flex items-center justify-center">
+//       <div className="max-w-md mx-auto p-8 bg-white rounded-xl shadow-md space-y-6 text-center">
+//         <h3 className="text-3xl font-bold text-blue-600 mb-4">Sign Up</h3>
+//         <p className="text-gray-700">Sorry for the inconvenience. This page is under construction.</p>
+//         <button
+//           onClick={() => window.location.reload()}
+//           className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-blue-700"
+//         >
+//           Go Back
+//         </button>
+//       </div>
+//     </section>
+//   );
+// }
 
 function App() {
   const [page, setPage] = useState("home");
@@ -662,99 +662,42 @@ function ContactPage() {
     </section>
   );
 }
-// Removed duplicate Footer function definition
-// function Footer() {
-//   return (
-//     <footer className="bg-gray-900 text-gray-300 py-10 mt-16">
-//       <div className="max-w-7xl grid mx-auto px-6 md:grid-cols-4 gap-10 ">
-        
-//         {/* Company Info */}
-//         <div>
-//           <h4 className="text-xl font-bold text-white mb-4">ProcureHub</h4>
-//           <p className="text-sm">
-//             Empowering transparent, fair, and bribeless IT maintenance contracting in India. 
-//             Bringing equal opportunities to small and large contractors alike.
-//           </p>
-//           <p className="mt-4 text-xs text-gray-500">
-//             Created by <span className="text-blue-400 font-semibold">Atul Mishra</span>
-//           </p>
-//         </div>
-
-//         {/* Quick Links */}
-//         <div>
-//           <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-//           <ul className="space-y-2 text-sm">
-//             <li><a href="#home" className="hover:text-blue-400">Home</a></li>
-//             <li><a href="#opportunities" className="hover:text-blue-400">Opportunities</a></li>
-//             <li><a href="#about" className="hover:text-blue-400">About Us</a></li>
-//             <li><a href="#contact" className="hover:text-blue-400">Contact Us</a></li>
-//           </ul>
-//         </div>
-
-//         {/* Get in Touch */}
-//         <div>
-//           <h4 className="text-lg font-semibold text-white mb-4">Get in Touch</h4>
-//           <p className="text-sm">We’d love to hear from you. Reach out anytime.</p>
-//           <a 
-//             href="#contact" 
-//             className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-//           >
-//             Contact Us
-//           </a>
-
-//           {/* Socials */}
-//           <div className="flex space-x-4 mt-4">
-//             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-//               <i className="fab fa-linkedin text-xl hover:text-blue-400"></i>
-//             </a>
-//             <a href="https://github.com" target="_blank" rel="noreferrer">
-//               <i className="fab fa-github text-xl hover:text-blue-400"></i>
-//             </a>
-//             <a href="https://twitter.com" target="_blank" rel="noreferrer">
-//               <i className="fab fa-twitter text-xl hover:text-blue-400"></i>
-//             </a>
-//           </div>
-//         </div>
-
-//         {/* Map */}
-//         <div>
-//           <h4 className="text-lg font-semibold text-white mb-4">Our Location</h4>
-//           <iframe
-//             title="Company Location"
-//             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.8859260821236!2d80.946166!3d26.846693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2e72f3b2b9d%3A0x9a1fbb3a2d4fcb8b!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1672589876543!5m2!1sen!2sin"
-//             width="100%"
-//             height="180"
-//             style={{ border: 0 }}
-//             allowFullScreen=""
-//             loading="lazy"
-//             className="rounded-lg"
-//           ></iframe>
-//         </div>
-//       </div>
-
-//       {/* Bottom Bar */}
-//       <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-500">
-//         © {new Date().getFullYear()} ProcureHub. All rights reserved.
-//       </div>
-//     </footer>
-//   );
-// }
-
+/* ---------------- Placeholder SignUp Page ---------------- */
+function PlaceholderSignUpPage() {
+  return (
+    <section className="py-16 bg-gradient-to-r from-white-100 to-indigo-600 text-white text-center min-h-screen flex flex-col justify-center">
+      <div className="max-w-3xl mx-auto px-6">
+        <h3 className="text-3xl text-gray-700 font-bold mb-6">Sign Up - Coming Soon!</h3>
+        <p className="text-gray-700 mb-6">
+          We are working hard to bring you the sign-up functionality. Stay tuned!
+        </p>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.location.href = 'mailto:atulllmishra1@gmail.com'} 
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-blue-700"
+        >
+          Mail to Join Waitlist
+        </motion.button>
+      </div>
+    </section>
+  );
+} 
 
 function Footer() {
   return (
     <footer className="bg-gradient-to-r from-blue-700 to-indigo-800 text-gray-200 pt-14 pb-8 mt-16">
-      <div className="max-w-7xl mx-auto px-6 grid grid-flow-col p-2 gap-10">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
-        {/* Brand */}
+        {/* Brand Info */}
         <div>
           <h4 className="text-2xl font-bold text-white mb-4">ProcureHub</h4>
           <p className="text-sm leading-relaxed">
-            Empowering transparent, fair, and bribeless IT maintenance contracting in India.
-            Creating equal opportunities for contractors of every size.
+            Empowering transparent, fair, and bribeless IT maintenance contracting 
+            in India. Bringing equal opportunities to small and large contractors alike.
           </p>
           <p className="mt-4 text-xs text-gray-400">
-            Built with ❤️ by <span className="text-white font-semibold">Atul Mishra</span>
+            Created by <span className="text-blue-300 font-semibold">Atul Mishra</span>
           </p>
         </div>
 
@@ -762,51 +705,19 @@ function Footer() {
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#home" className="hover:text-blue-300">Home</a></li>
+            <li><button onClick={() => window.scrollTo(0, 0)} className="hover:text-blue-300">Home</button></li>
             <li><a href="#opportunities" className="hover:text-blue-300">Opportunities</a></li>
             <li><a href="#about" className="hover:text-blue-300">About Us</a></li>
             <li><a href="#contact" className="hover:text-blue-300">Contact Us</a></li>
-            <li><a href="#features" className="hover:text-blue-300">Features</a></li>
-            <li><a href="#how" className="hover:text-blue-300">How It Works</a></li>
-            <li><a href="#testimonials" className="hover:text-blue-300">Testimonials</a></li>
           </ul>
         </div>
 
-        {/* Resources */}
-        <div>
-          <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-blue-300">Blog</a></li>
-            <li><a href="./Helpcenter.js" className="hover:text-blue-300">Help Center</a></li>
-            <li><a href="#" className="hover:text-blue-300">FAQs</a></li>
-            <li><a href="#" className="hover:text-blue-300">Documentation</a></li>
-            <li><a href="#" className="hover:text-blue-300">Community Forum</a></li>
-          </ul>
-        </div>
-
-        {/* Legal */}
-        <div>
-          <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-blue-300">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-blue-300">Terms of Service</a></li>
-            <li><a href="#" className="hover:text-blue-300">Cookie Policy</a></li>
-            <li><a href="#" className="hover:text-blue-300">Disclaimer</a></li>
-          </ul>
-        </div>
-
-        {/* Get in Touch */}
+        {/* Contact Info */}
         <div>
           <h4 className="text-lg font-semibold text-white mb-4">Get in Touch</h4>
           <p className="text-sm">We’d love to hear from you. Reach out anytime.</p>
-          <a 
-            href="#contact"
-            className="inline-block mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition"
-          >
-            Contact Us
-          </a>
-
-          {/* Socials */}
+          <p className="mt-3 text-sm">📧 atulllmishra1@gmail.com</p>
+          <p className="text-sm">📞 +91 74588 44711</p>
           <div className="flex space-x-4 mt-4">
             <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <i className="fab fa-linkedin text-xl hover:text-blue-300"></i>
@@ -819,48 +730,29 @@ function Footer() {
             </a>
           </div>
         </div>
-      </div>
 
-      {/* Newsletter */}
-      <div className="max-w-4xl mx-auto mt-12 px-6 text-center">
-        <h5 className="text-lg font-semibold mb-3">Subscribe to our Newsletter</h5>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 w-full sm:w-2/3 rounded-lg text-gray-900 focus:outline-none"
-          />
-          <button className="bg-blue-500 px-6 py-2 rounded-lg hover:bg-blue-400 transition">
-            Subscribe
-          </button>
+        {/* Map */}
+        <div>
+          <h4 className="text-lg font-semibold text-white mb-4">Our Location</h4>
+          <iframe
+            title="Company Location"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14291.834716532932!2d82.5294056!3d26.42481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1759164902332!5m2!1sen!2sin" 
+            width="100%"
+            height="180"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            className="rounded-lg"
+          ></iframe>
         </div>
       </div>
 
-      {/* Map Section */}
-      <div className="max-w-6xl mx-auto mt-12 flex px-6">
-        <h4 className="text-lg font-semibold p-10 text-white mb-4">Our Location:</h4>
-        <iframe
-          title="Company Location"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7145.537864863335!2d82.53638850000002!3d26.4309323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1759068748462!5m2!1sen!2sin"
-          width="100%"
-          height="110%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          className="rounded-lg"
-        ></iframe>
-      </div>
-
       {/* Bottom Bar */}
-      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
+      <div className="mt-8 border-t border-gray-600 pt-4 text-center text-sm text-gray-200">
         © {new Date().getFullYear()} ProcureHub. All rights reserved.
       </div>
     </footer>
   );
 }
-
-
-
-
 
 export default App;
