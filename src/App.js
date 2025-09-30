@@ -1,23 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import SignUpPage from "./SignUpPage"; // Uncomment this line when SignUpPage.js is ready
+// import { Mail } from "lucide-react";
 
-// Placeholder for SignUpPage as it was imported but not defined
-// function PlaceholderSignUpPage() {
-//   return (
-//     <section className="min-h-screen py-16 bg-gray-100 flex items-center justify-center">
-//       <div className="max-w-md mx-auto p-8 bg-white rounded-xl shadow-md space-y-6 text-center">
-//         <h3 className="text-3xl font-bold text-blue-600 mb-4">Sign Up</h3>
-//         <p className="text-gray-700">Sorry for the inconvenience. This page is under construction.</p>
-//         <button
-//           onClick={() => window.location.reload()}
-//           className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-blue-700"
-//         >
-//           Go Back
-//         </button>
-//       </div>
-//     </section>
-//   );
-// }
 
 function App() {
   const [page, setPage] = useState("home");
@@ -54,6 +39,7 @@ function App() {
             ))}
           </div>
           <motion.button
+            id="get-started-btn"
             onClick={() => setPage("signup")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -68,8 +54,8 @@ function App() {
       {page === "home" && <HomePage setPage={setPage} />}
       {page === "opportunities" && <OpportunitiesPage />}
       {page === "about" && <AboutPage />}
-      {page === "contact" && <ContactPage />}
-      {page === "signup" && <PlaceholderSignUpPage />}
+      {page === "contact" && <ContactPage setPage={setPage} />}
+      {page === "signup" && <SignUpPage />}
 
 
       {/* Footer */}
@@ -604,19 +590,27 @@ function AboutPage() {
         <p className="text-gray-700">
           At ProcureHub, our mission is to democratize procurement in IT maintenance contracting by: Enabling Equal Access: Making sure that a small contractor from a small town has the same chance of winning a contract as a large enterprise contractor from a metro city. Ensuring Transparency: Eliminating hidden costs, unfair practices, and favoritism in contract bidding and execution. Promoting Anonymity: Allowing contractors to compete purely on the strength of their proposals, without bias or prejudice based on name, size, or background. Building Trust: Creating a community where businesses and contractors can interact confidently, knowing that the system ensures fairness.
         </p>
-        <h4 className="text-2xl font-semibold mb-3 text-blue-600">
+        <h4 className="text-2xl font-semibold mb-3 mt-4 text-blue-600">
           About the Creator
         </h4>
         <p className="text-gray-700">
           Hi, I’m <span className="font-semibold">Atul Kumar Mishra</span>, the creator of ProcureHub. I started this project with the vision of eliminating unfair practices in procurement and creating equal opportunities for all. Inspired by my personal experiences and passion for technology, I aim to make procurement simple, transparent, and impactful for everyone.
         </p>
+         <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => { window.location.href = "mailto:atulllmishra1@gmail.com"; }}
+          className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-gray-100 align-middle mt-7"
+        >
+          Contact Creator
+        </motion.button>
       </div>
     </section>
   );
 }
 
 /* ---------------- Contact Page ---------------- */
-function ContactPage() {
+function ContactPage({ setPage }) {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-3xl mx-auto px-6">
@@ -653,37 +647,30 @@ function ContactPage() {
           >
             Send Message
           </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => { setPage("home"); }}
+            className="bg-orange-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 float-right"
+          >
+            Cancel
+          </motion.button>
         </form>
-        <div className="text-center mt-8 text-gray-700">
-          <p>Email: atulllmishra1@gmail.com</p>
-          <p>Phone: +91 74588 44711</p>
-        </div>
+        {/* <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => { window.location.href = "mailto:atulllmishra1@gmail.com"; }}
+          className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-gray-100 align-middle mt-7"
+        >
+          Contact Creator
+        </motion.button>
+         */}
       </div>
     </section>
   );
 }
-/* ---------------- Placeholder SignUp Page ---------------- */
-function PlaceholderSignUpPage() {
-  return (
-    <section className="py-16 bg-gradient-to-r from-white-100 to-indigo-600 text-white text-center min-h-screen flex flex-col justify-center">
-      <div className="max-w-3xl mx-auto px-6">
-        <h3 className="text-3xl text-gray-700 font-bold mb-6">Sign Up - Coming Soon!</h3>
-        <p className="text-gray-700 mb-6">
-          We are working hard to bring you the sign-up functionality. Stay tuned!
-        </p>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => window.location.href = 'mailto:atulllmishra1@gmail.com'} 
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md font-semibold transition-all duration-300 hover:bg-blue-700"
-        >
-          Mail to Join Waitlist
-        </motion.button>
-      </div>
-    </section>
-  );
-} 
 
+/* ---------------- Footer ---------------- */
 function Footer() {
   return (
     <footer className="bg-gradient-to-r from-blue-700 to-indigo-800 text-gray-200 pt-14 pb-8 mt-16">
